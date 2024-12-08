@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App for Kids</title>
+  <script src="js/index.js"></script>
+
+
+
+
+</head>
+
+<body onload="clearInput()">
+  <div class="loginContainer">
+    <h1>Kids Quiz</h1>
+
+      <input type="text" id="username" placeholder="Enter username">
+      <i class="fas fa-pencil"></i>
+  
+
+    
+      <input type="text" id="mail" placeholder="Enter Valid Email">
+    
+    <div class="error" id="emailError"></div>
+
+    <h3>Choose an Avatar</h3>
+
+    <div class="avatarWrap">
+      <label class="avatar">
+        <input  class="radioInput"  type="radio" name="avatar" value="duck" id="duck"/>
+        <img class="avatarSVG" src="icons/duck.svg" alt="duck avatar" />
+      </label>
+      <label class="avatar">
+        <input class="radioInput" type="radio" name="avatar" value="frog" id="frog" />
+        <img class="avatarSVG" src="icons/frog.svg" alt="frog avatar" />
+      </label>
+    
+    </div>
+
+    <button onclick="validate()">Submit</button>
+
+  </div>
+<!-- <script src="js/index.js"></script> -->
+</body>
+
+</html>

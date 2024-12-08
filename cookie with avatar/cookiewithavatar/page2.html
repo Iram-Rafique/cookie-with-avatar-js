@@ -1,0 +1,49 @@
+<!-- Example for page2.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+</head>
+
+<body>
+    <h1>Welcome to Page 2</h1>
+
+    <div id="avatarContainer">
+        <h2>Your Selected Avatar:</h2>
+        <img id="selectedAvatarImg" src="" alt="Selected Avatar">
+    </div>
+
+    <div>
+        <h3>Your Details:</h3>
+        <p>Username: <span id="displayUsername"></span></p>
+        <p>Email: <span id="displayEmail"></span></p>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script>
+        window.onload = function () {
+            var storedUsername = getCookie("username");
+            var storedEmail = getCookie("email");
+            var storedAvatar = getCookie("selectedAvatar");
+
+            if (storedUsername) {
+                document.getElementById("displayUsername").innerText = storedUsername;
+            }
+
+            if (storedEmail) {
+                document.getElementById("displayEmail").innerText = storedEmail;
+            }
+
+            if (storedAvatar) {
+                // Display the selected avatar on the page
+                var selectedAvatarImg = document.getElementById("selectedAvatarImg");
+                selectedAvatarImg.src = "icons/" + storedAvatar + ".svg";
+            }
+        };
+    </script>
+</body>
+
+</html>
